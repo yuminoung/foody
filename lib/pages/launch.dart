@@ -15,9 +15,10 @@ class _LaunchState extends State<Launch> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellow,
       body: Center(
         child: Text(
-          'Foody',
+          '小黄送餐',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
         ),
       ),

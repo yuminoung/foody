@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-/*
- * Custom navigation bar and custom navigation bar item,
- * is taken from my 2019 IT Project
- */
+/* 
+Taken from my it project, custom bottom app bar and custom bottom navigation bar
+*/
 
 class CustomBottomAppBarItem {
-  final IconData icon;
-  CustomBottomAppBarItem({this.icon});
+  final String iconImagePath;
+  final String title;
+  CustomBottomAppBarItem({this.iconImagePath, this.title});
 }
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -22,8 +22,8 @@ class CustomBottomNavigationBar extends StatefulWidget {
   CustomBottomNavigationBar({
     this.selectedColor,
     this.color,
-    this.height,
-    this.iconSize: 24,
+    this.height: 60,
+    this.iconSize: 20,
     this.iconActiveSize: 32,
     this.items,
     this.selectedIndex,
@@ -61,7 +61,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     int index,
     ValueChanged<int> onPressed,
   }) {
-    Color color = _selectedIndex == index ? widget.selectedColor : widget.color;
+    // Color color = _selectedIndex == index ? widget.selectedColor : widget.color;
 
     return Expanded(
       child: SizedBox(
@@ -71,12 +71,29 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           child: GestureDetector(
             behavior: HitTestBehavior.translucent,
             onTap: () => onPressed(index),
-            child: Center(
-              child: Icon(
-                item.icon,
-                color: color,
-              ),
-            ),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ImageIcon(AssetImage(item.iconImagePath),
+                      color:
+                          _selectedIndex == index ? Colors.black : Colors.grey,
+                      size: widget.iconSize
+                      // size: _selectedIndex == index
+                      //     ? widget.iconActiveSize
+                      //     : widget.iconSize,
+                      ),
+                  Text(
+                    item.title,
+                    style: TextStyle(
+                        color: _selectedIndex == index
+                            ? Colors.black
+                            : Colors.grey,
+                        fontSize: 12,
+                        fontWeight: _selectedIndex == index
+                            ? FontWeight.bold
+                            : FontWeight.normal),
+                  )
+                ]),
           ),
         ),
       ),

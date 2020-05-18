@@ -51,6 +51,20 @@ flutter:
     - assets/images/carousel1.png
     - assets/images/carousel2.png
     - assets/images/carousel3.png
+    - assets/icons/bill.png
+    - assets/icons/fresh.png
+    - assets/icons/home.png
+    - assets/icons/profile.png
+    - assets/icons/recommend.png
+    - assets/icons/qr.png
+    - assets/icons/location.png
+    - assets/icons/search.png
+    - assets/icons/setting.png
+    - assets/images/avatar.jpg
+    - assets/icons/right_arrow.png
+    - assets/images/invite.png
+    - assets/icons/coupon.png
+    - assets/images/food.png
 
     # - images/a_dot_ham.jpeg
 

@@ -7,7 +7,8 @@ class Headline extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(fontWeight: FontWeight.bold),
+      textAlign: TextAlign.center,
+      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
     );
   }
 }
