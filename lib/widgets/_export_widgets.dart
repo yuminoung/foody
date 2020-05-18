@@ -5,3 +5,4 @@ export 'custom_app_bar.dart';
 export 'custom_divider.dart';
 export 'custom_list_tile.dart';
 export 'sliver_divider.dart';
+export 'restaurant_list_item.dart';
