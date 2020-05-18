@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/*
+  Taken from my IT Project.
+*/
+
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
   final Widget leading;

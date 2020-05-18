@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foody/widgets/_export_widgets.dart';
-import 'dart:math';
 
 class BottomHome extends StatelessWidget {
   final List<String> foodList = [
