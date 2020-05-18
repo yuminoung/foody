@@ -18,14 +18,18 @@ class _HomeState extends State<Home> {
     BottomMe()
   ];
 
+  List<String> _titles = ['Home', 'Recommend', 'Fresh', 'Order', 'Me'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Headline(title: 'Home'),
+        title: Headline(title: _titles[_index]),
       ),
       body: _bottomPages[_index],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _index,
+        type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
             _index = index;
@@ -40,9 +44,6 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
               icon: Icon(Icons.person), title: Text('Order')),
           BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('Me'))
-
-          // BottomNavigationBarItem(icon: Icon(Icons.menu), title: Text('Home')),
-          // BottomNavigationBarItem(icon: Icon(Icons.menu), title: Text('Home'))
         ],
       ),
     );

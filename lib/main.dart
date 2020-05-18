@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Foody',
       theme: ThemeData(
         fontFamily: 'Baloo2',
-        primarySwatch: Colors.yellow,
+        // primarySwatch: Colors.yellow,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
     );
