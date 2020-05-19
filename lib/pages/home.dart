@@ -39,6 +39,7 @@ class _HomeState extends State<Home> {
   Widget _buildCustomAppBarLeading() {
     return _index == 0
         ? GestureDetector(
+            behavior: HitTestBehavior.translucent,
             onTap: () {
               Navigator.pushNamed(context, '/address');
             },

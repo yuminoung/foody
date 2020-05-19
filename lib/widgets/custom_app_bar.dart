@@ -32,17 +32,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               hasPop
                   ? Expanded(
                       flex: 2,
-                      child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: Container(
-                            alignment: Alignment.centerLeft,
-                            height: 20,
-                            child: GestureDetector(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Icon(Icons.chevron_left)),
-                          )),
+                      child: GestureDetector(
+                        behavior: HitTestBehavior.translucent,
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Container(
+                              alignment: Alignment.centerLeft,
+                              height: 20,
+                              child: Icon(Icons.chevron_left),
+                            )),
+                      ),
                     )
                   : Expanded(
                       flex: 2,

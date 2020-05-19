@@ -6,5 +6,6 @@ setupRoute() {
     '/home': (context) => Home(),
     '/search': (context) => Search(),
     '/address': (context) => Address(),
+    '/restaurant': (context) => Restaurant(),
   };
 }
